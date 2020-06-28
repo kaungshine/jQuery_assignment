@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+</head>
+<body>
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#add').click(function() {
+				var f = parseInt($('#firstnum').val(), 10);
+				var s = parseInt($('#secondnum').val(), 10);
+				var add = f+s;
+				$('#result').text(add);
+			});
+
+			$('#sub').click(function() {
+				var f = parseInt($('#firstnum').val(), 10);
+				var s = parseInt($('#secondnum').val(), 10);
+				var sub = f-s;
+				$('#result').text(sub);
+			});
+
+			$('#multiple').click(function() {
+				var f = parseInt($('#firstnum').val(), 10);
+				var s = parseInt($('#secondnum').val(), 10);
+				var multiple = f*s;
+				$('#result').text(multiple);
+			});
+
+			$('#divide').click(function() {
+				var f = parseInt($('#firstnum').val(), 10);
+				var s = parseInt($('#secondnum').val(), 10);
+				var divide = f/s;
+				$('#result').text(divide);
+			});
+		});
+	</script>
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">Calculator</h1>
+		</div>
+	</div>
+	
+	<div class="container py-3">
+
+		<form>
+
+			<div class="row mb-3 offset-lg-2">
+				<label class="col-form-label col-3 col-lg-2" for="firstnum">First Number: </label>
+				<div class="col-9 col-lg-6">
+					<input type="number" name="firstnum" class="form-control" id="firstnum">
+				</div>
+			</div>
+
+			<div class="row mb-3 offset-lg-2">
+				<label class="col-form-label col-3 col-lg-2" for="secondnum">Second Number: </label>
+				<div class="col-9 col-lg-6">
+					<input type="number" name="secondnum" class="form-control" id="secondnum">
+				</div>
+			</div>
+
+			<div class="row offset-lg-2">
+				<div class="col-3 col-lg-2">
+					<button type="button" class="btn btn-outline-info btn-block my-3 font-weight-bold" id="add"><i class="fas fa-plus"></i></button>
+				</div>
+				<div class="col-3 col-lg-2">
+					<button type="button" class="btn btn-outline-success btn-block my-3 font-weight-bold" id="sub"><i class="fas fa-minus"></i></button>
+				</div>
+				<div class="col-3 col-lg-2">
+					<button type="button" class="btn btn-outline-danger btn-block my-3 font-weight-bold" id="multiple"><i class="fas fa-times"></i></button>
+				</div>
+				<div class="col-3 col-lg-2">
+					<button type="button" class="btn btn-outline-warning btn-block my-3 font-weight-bold" id="divide"><i class="fas fa-divide"></i></button>
+				</div>
+			</div>
+
+		</form>
+
+		<div class="row offset-lg-2 mt-3">
+			<div class="col-12">
+				<h3>Result : <span id="result"></span></h3>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
